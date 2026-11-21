@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neony LED i elektronika ze Świdnika | 24sklep.pl - RESET neo</title>
+<meta name="description" content="Neony LED na zamówienie i sklep z elektroniką: taśmy LED, neon Flex, zasilacze, sterowniki, osprzęt elektryczny. RESET neo, Świdnik. Podgląd koncepcji.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bri-l.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/arc-l.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/herom-800.webp" imagesrcset="img/herom-800.webp 800w, img/herom-1200.webp 1200w" imagesizes="100vw" media="(max-width:760px)">
+<link rel="preload" as="image" href="img/hero-1800.webp" imagesrcset="img/hero-1200.webp 1200w, img/hero-1800.webp 1800w, img/hero-2640.webp 2640w" imagesizes="60vw" media="(min-width:761px)">
+<style>
+@font-face{font-family:Bri;src:url(fonts/bri-l.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026}
+@font-face{font-family:Bri;src:url(fonts/bri-e.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Arc;src:url(fonts/arc-l.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026}
+@font-face{font-family:Arc;src:url(fonts/arc-e.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+:root{--granat:#252C39;--noc:#1F2530;--cyan:#29DFF3;--czer:#EE2E2F;--ziel:#78D054;--cyanD:#0A7F92;--czerD:#D3201F;--zielD:#3E8E21;--tlo:#F1F3F6;--linia:#DDE2E9;--tekst:#1E2430;--szary:#556070;--h:72px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--h)}
+body{margin:0;font:17px/1.6 Arc,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tekst);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Bri,Arc,sans-serif;font-weight:700;line-height:1.12;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(28px,3.4vw,44px)}
+h3{font-size:20px;line-height:1.25}
+p{margin:0}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:0;border-radius:6px;background:var(--czerD);color:#fff;font:600 17px/1 Arc,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:#B71616}
+.btn.ciemny{background:var(--granat)}
+.btn.ciemny:hover{background:#11151d}
+.romb{display:inline-block;width:12px;height:12px;border:2.5px solid var(--c,var(--czer));border-radius:3px;transform:rotate(45deg);flex:none}
+.romb.c{--c:var(--cyan)}.romb.r{--c:var(--czer)}.romb.z{--c:var(--ziel)}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia)}
+.top .wrap{height:var(--h);display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;text-decoration:none;flex:none}
+.logo svg{height:40px;width:auto}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{position:relative;padding:10px 14px;text-decoration:none;font-weight:600;font-size:16px;border-radius:6px}
+.menu a:hover{background:var(--tlo)}
+.menu a.akt::after{content:"";position:absolute;left:50%;bottom:-3px;width:8px;height:8px;border:2px solid var(--czer);border-radius:2px;transform:translateX(-50%) rotate(45deg);background:#fff}
+.tel{font-weight:700;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.tel svg{width:18px;height:18px}
+.kosz{position:relative;display:grid;place-items:center;width:46px;height:46px;border-radius:8px;background:var(--granat);color:#fff;text-decoration:none}
+.kosz svg{width:22px;height:22px}
+.kosz span{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--czerD);font-size:12px;font-weight:700;display:grid;place-items:center}
+.ham{display:none;width:46px;height:46px;border:1px solid var(--linia);border-radius:8px;background:#fff;cursor:pointer;padding:0;place-items:center}
+.ham i,.ham i::before,.ham i::after{display:block;width:20px;height:2px;background:var(--granat);position:relative;transition:.2s}
+.ham i::before,.ham i::after{content:"";position:absolute;left:0}
+.ham i::before{top:-6px}.ham i::after{top:6px}
+.otw .ham i{background:transparent}.otw .ham i::before{top:0;transform:rotate(45deg)}.otw .ham i::after{top:0;transform:rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--h));display:flex;align-items:center;background:#070D19;color:#fff;overflow:hidden}
+.hero-foto{position:absolute;top:0;bottom:0;right:0;left:max(calc(50% - 100px),calc((100% - 1240px)/2 + 500px))}
+.hero-foto{display:flex;align-items:center}
+.hero-foto img{width:100%;height:auto;max-height:100%;object-fit:contain;--m1:linear-gradient(90deg,transparent 0,#000 16%,#000 94%,transparent 100%);--m2:linear-gradient(transparent 0,#000 16%,#000 84%,transparent 100%);-webkit-mask-image:var(--m1),var(--m2);-webkit-mask-composite:source-in;mask-image:var(--m1),var(--m2);mask-composite:intersect}
+.hero-in{position:relative;z-index:2;padding:56px 0;width:100%}
+.hero-tekst{max-width:500px}
+.hero h1{font-size:clamp(38px,3.7vw,60px);margin-bottom:22px}
+.hero .lead{font-size:clamp(17px,1.25vw,19px);line-height:1.55;color:#D5DBE5;margin-bottom:32px}
+.szukaj{display:flex;max-width:560px;background:#fff;border-radius:8px;padding:6px;gap:6px}
+.szukaj input{flex:1;min-width:0;border:0;font:17px Arc,sans-serif;padding:0 14px;color:var(--tekst);background:transparent;outline:none}
+.szukaj .btn{min-height:50px;padding:0 22px}
+.hero-info{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px;color:#CBD2DC}
+.hero-info span{display:flex;align-items:center;gap:10px}
+
+/* sekcje */
+.sek{padding:clamp(64px,8vw,104px) 0}
+.sek.szara{background:var(--tlo)}
+.sek-nag{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}
+.sek-nag p{color:var(--szary);max-width:560px;margin-top:12px}
+.strzalki{display:flex;gap:8px;flex:none}
+.strzalki button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--granat);background:#fff;cursor:pointer;display:grid;place-items:center;color:var(--granat)}
+.strzalki button:hover{background:var(--granat);color:#fff}
+.strzalki svg{width:18px;height:18px}
+
+/* dzialy */
+.dzialy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.dzial{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia);border-radius:10px;overflow:hidden;text-decoration:none;transition:border-color .2s,transform .2s}
+.dzial:hover{border-color:var(--granat);transform:translateY(-2px)}
+.dzial-foto{aspect-ratio:4/3;background:#111;overflow:hidden}
+.dzial-foto img{width:100%;height:100%;object-fit:cover}
+.dzial-foto.jasne{background:#fff}
+.dzial-foto.jasne{display:grid;place-items:center}
+.dzial-foto.jasne img{object-fit:contain;padding:14px;max-width:230px;max-height:100%;margin:auto}
+.dzial-in{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.dzial-in h3{display:flex;align-items:center;gap:14px;font-size:24px}
+.dzial-in p{color:var(--szary);font-size:16px}
+.dzial ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.dzial li{font-size:14px;padding:5px 10px;border-radius:5px;background:var(--tlo)}
+.kategorie{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.kategorie a{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border:1px solid var(--linia);border-radius:6px;text-decoration:none;font-weight:600;font-size:15px;background:#fff}
+.kategorie a:hover{border-color:var(--granat)}
+.kategorie .romb{width:9px;height:9px;border-width:2px}
+
+/* karuzele */
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*20px)/4);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab}
+.tor::-webkit-scrollbar{display:none}
+.tor>*{scroll-snap-align:start}
+.tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.karta{background:#fff;border:1px solid var(--linia);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.karta-foto{aspect-ratio:4/3;background:#fff;display:grid;place-items:center;overflow:hidden}
+.karta-foto img{width:100%;height:100%;object-fit:contain;-webkit-user-drag:none;user-select:none}
+.karta.neon .karta-foto{background:#0d0f13}
+.karta.neon .karta-foto img{object-fit:cover}
+.karta-in{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.karta-in h3{font-family:Arc,sans-serif;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:0}
+.karta-in .dzialik{font-size:13px;color:var(--szary);display:flex;align-items:center;gap:8px}
+.karta-in .dzialik .romb{width:8px;height:8px;border-width:2px}
+.cena-rzad{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:6px}
+.cena{font-family:Bri,sans-serif;font-size:22px}
+.dokosz{height:42px;padding:0 14px;border-radius:6px;border:1.5px solid var(--granat);background:#fff;color:var(--granat);font:600 15px Arc,sans-serif;cursor:pointer;white-space:nowrap}
+.dokosz:hover,.dokosz.ok{background:var(--granat);color:#fff}
+.uwaga{font-size:13px;color:var(--szary)}
+
+/* ciemna: neon na zamowienie */
+.noc{background:var(--noc);color:#fff}
+.noc-gora{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start;margin-bottom:44px}
+.noc h2{margin-bottom:18px}
+.noc .opis{color:#C9D0DA;font-size:18px}
+.kroki{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.kroki li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:16px;align-items:start;color:#C9D0DA}
+.kroki li .romb{margin-top:8px}
+.kroki b{color:#fff;display:block;font-size:18px}
+.noc .btn{margin-top:30px}
+.real{grid-auto-columns:calc((100% - 2*16px)/3);gap:16px}
+.real figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:#000;aspect-ratio:3/2}
+.real figure img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none;cursor:zoom-in}
+.real figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;font-size:14px;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.noc .strzalki button{background:transparent;border-color:#6B7585;color:#fff}
+.noc .strzalki button:hover{background:#fff;color:var(--noc)}
+
+/* opinie */
+.opinie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.opinia{padding:28px;border-top:3px solid var(--c);background:var(--tlo);border-radius:0 0 10px 10px}
+.opinia p{font-size:17px;margin-bottom:16px}
+.opinia b{font-size:15px}
+.zrodlo{margin-top:18px;font-size:14px;color:var(--szary)}
+
+/* dostawa */
+.dost{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px}
+.tab{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:16px}
+.tab td{padding:14px 18px;border-bottom:1px solid var(--linia)}
+.tab tr:last-child td{border-bottom:0}
+.tab td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.tab small{display:block;color:var(--szary);font-size:13px}
+.plat{background:#fff;border-radius:10px;padding:26px 28px}
+.plat h3{margin-bottom:12px}
+.plat p{color:var(--szary);font-size:16px;margin-bottom:12px}
+.plat ul{margin:0;padding-left:18px;font-size:16px}
+.plat li{margin-bottom:6px}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.dane{display:grid;gap:18px;margin:26px 0}
+.dane>div{display:grid;grid-template-columns:22px minmax(0,1fr);gap:14px}
+.dane .romb{margin-top:8px}
+.dane a{font-weight:700;text-decoration:none}
+.mapa{aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:var(--tlo);border:1px solid var(--linia)}
+.mapa iframe{width:100%;height:100%;border:0}
+form.zap{background:var(--tlo);border-radius:10px;padding:30px;display:grid;gap:14px}
+form.zap h3{font-size:24px}
+form.zap p.mal{color:var(--szary);font-size:15px;margin-top:-4px}
+.pole{display:grid;gap:6px}
+.pole label{font-size:14px;font-weight:600}
+.pole input,.pole textarea,.pole select{width:100%;font:16px Arc,sans-serif;padding:13px 14px;border:1px solid #C9D0DA;border-radius:6px;background:#fff;color:var(--tekst)}
+.pole textarea{min-height:110px;resize:vertical}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.info-ok{display:none;padding:12px 14px;border-radius:6px;background:#E5F5DE;color:#24521A;font-size:15px}
+
+/* stopka */
+.stopka{background:var(--granat);color:#AEB7C4;padding:56px 0 28px;font-size:15px}
+.stopka-siatka{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.stopka h4{color:#fff;font:700 16px Bri,sans-serif;margin:0 0 14px}
+.stopka ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:#fff}
+.stopka .logo svg{height:38px}
+.stopka-dol{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;padding-top:22px;border-top:1px solid #3A4352}
+.podglad-info{font-size:13px;color:#8C96A5}
+
+/* pasek mobilny */
+.mob{display:none}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,12,16,.94);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.wid{display:flex}
+.lb img{max-width:min(1200px,100%);max-height:86vh;border-radius:6px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:26px}
+.lb .zam{top:16px;right:16px}.lb .pop{left:16px;top:50%}.lb .nas{right:16px;top:50%}
+.lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#fff;font-size:15px}
+
+@media (max-width:1100px){
+ .menu{display:none}
+ .ham{display:grid}
+ .top .wrap{gap:12px}
+ .tel{margin-left:auto}
+ .otw .menu{display:flex;position:fixed;top:var(--h);left:0;right:0;flex-direction:column;background:#fff;padding:12px 20px 24px;border-bottom:1px solid var(--linia);box-shadow:0 18px 30px rgba(0,0,0,.12)}
+ .otw .menu a{padding:14px 6px;font-size:18px;border-bottom:1px solid var(--linia);border-radius:0}
+ .otw .menu a.akt::after{left:auto;right:10px;bottom:50%;transform:translateY(50%) rotate(45deg)}
+ .tor{grid-auto-columns:calc((100% - 2*20px)/3)}
+ .stopka-siatka{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+ .dzialy,.opinie{grid-template-columns:1fr}
+ .dzial{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+ .dzial-foto{aspect-ratio:auto;min-height:100%}
+ .noc-gora,.dost,.kontakt{grid-template-columns:1fr;gap:32px}
+ .real{grid-auto-columns:calc((100% - 16px)/2)}
+}
+@media (max-width:760px){
+ :root{--h:62px}
+ body{font-size:16px}
+ .wrap{width:calc(100% - 32px)}
+ .logo svg{height:32px}
+ .tel span{display:none}
+ .tel{width:46px;height:46px;border:1px solid var(--linia);border-radius:8px;justify-content:center}
+ .hero{flex-direction:column;align-items:stretch}
+  .hero-foto{position:relative;inset:auto;flex:1 1 auto;min-height:min(56vw,30svh);max-height:min(52svh,76vw);display:block}
+ .hero-foto img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;--m1:linear-gradient(#000,#000);--m2:linear-gradient(transparent 0,#000 12%,#000 80%,transparent 100%)}
+ .hero-in{display:flex;flex-direction:column;justify-content:center}
+ .hero-in{flex:0 0 auto;padding:4px 0 26px}
+ .hero h1{font-size:clamp(28px,8.4vw,36px);margin-bottom:12px}
+ .hero .lead{font-size:16px;margin-bottom:24px}
+ .szukaj .btn{padding:0 16px}
+ .hero-info{font-size:13.5px;margin-top:16px;gap:6px 16px}
+ .sek-nag{margin-bottom:26px}
+ .sek-nag .strzalki{display:none}
+ .dzial{display:flex}
+ .dzial-foto{aspect-ratio:16/10;min-height:0}
+ .tor{grid-auto-columns:72%;gap:14px}
+ .real{grid-auto-columns:86%}
+ .dwa{grid-template-columns:1fr}
+ form.zap{padding:22px}
+ .stopka-siatka{grid-template-columns:1fr 1fr;gap:26px 18px}
+ .stopka-siatka>div:first-child{grid-column:1/-1}
+ .mob{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--linia);transform:translateY(110%);transition:transform .25s}
+ .mob.widac{transform:none}
+ .mob a{min-height:48px;font-size:16px}
+ .mob .btn.ciemny{background:#fff;color:var(--granat);border:1.5px solid var(--granat)}
+ .stopka{padding-bottom:96px}
+}
+@media (max-width:760px) and (max-height:700px){
+ .hero h1{font-size:27px}
+ .hero .lead{font-size:15px;line-height:1.5;margin-bottom:24px}
+ .hero-info{display:none}
+ .hero-foto{min-height:24svh}
+}
+@media (min-width:761px) and (max-height:820px){
+ .hero h1{font-size:clamp(36px,4vw,54px)}
+ .hero .lead{margin-bottom:24px}
+}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#top" aria-label="RESET neo - strona główna">
+   <svg viewBox="0 0 300 80" role="img" aria-label="RESET neo"><text x="0" y="57" font-family="Bri,Arc,sans-serif" font-weight="700" font-size="52" letter-spacing="1" fill="none" stroke="currentColor" stroke-width="2.4" style="color:var(--logo,#252C39)">RESET</text>
+    <g fill="none" stroke-width="4.5" stroke-linejoin="round"><rect x="190" y="34" width="30" height="30" rx="6" transform="rotate(45 205 49)" stroke="#20C6DA"/><rect x="223" y="9" width="30" height="30" rx="6" transform="rotate(45 238 24)" stroke="#EE2E2F"/><rect x="256" y="34" width="30" height="30" rx="6" transform="rotate(45 271 49)" stroke="#5DB83C"/></g>
+    <g font-family="Georgia,serif" font-style="italic" font-size="22" text-anchor="middle"><text x="205" y="56" fill="#20C6DA">n</text><text x="238" y="31" fill="#EE2E2F">e</text><text x="271" y="56" fill="#5DB83C">o</text></g></svg>
+  </a>
+  <nav class="menu" id="menu">
+   <a href="#top" class="akt">Sklep</a>
+   <a href="#neony">Gotowe neony</a>
+   <a href="#na-zamowienie">Neon na zamówienie</a>
+   <a href="#dostawa">Dostawa i płatności</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+48814602500" aria-label="Zadzwoń: 81 460 25 00"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>81 460 25 00</span></a>
+  <a class="kosz" href="#popularne" aria-label="Koszyk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 7h16l-1.6 11.2a2 2 0 0 1-2 1.8H7.6a2 2 0 0 1-2-1.8z"/><path d="M8.5 10V6.5a3.5 3.5 0 0 1 7 0V10"/></svg><span id="ile">0</span></a>
+  <button class="ham" id="ham" aria-label="Menu" aria-expanded="false"><i></i></button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+ <div class="hero-foto">
+  <picture><source media="(max-width:760px)" srcset="img/herom-800.webp 800w, img/herom-1200.webp 1200w" sizes="100vw"><img src="img/hero-1200.webp" srcset="img/hero-800.webp 800w, img/hero-1200.webp 1200w, img/hero-1800.webp 1800w, img/hero-2640.webp 2640w" sizes="60vw" width="2640" height="1350" alt="Wielokolorowy neon OTWARTE wykonany przez RESET neo" fetchpriority="high"></picture>
+ </div>
+ <div class="hero-in">
+  <div class="wrap">
+   <div class="hero-tekst">
+    <h1>Neony LED i elektronika ze Świdnika</h1>
+    <p class="lead">Robimy neony na zamówienie, a w sklepie czeka ponad 2&nbsp;100 produktów: taśmy i neon LED Flex, zasilacze, sterowniki, osprzęt elektryczny i fotowoltaika.</p>
+    <form class="szukaj" role="search" onsubmit="return false">
+     <input type="search" aria-label="Szukaj w sklepie" placeholder="np. taśma COB 12V">
+     <button class="btn" type="submit">Szukaj</button>
+    </form>
+    <div class="hero-info"><span><i class="romb c"></i>Wysyłka DPD i InPost</span><span><i class="romb r"></i>Odbiór osobisty w Świdniku</span><span><i class="romb z"></i>Płatność Przelewy24</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="dzialy">
+ <div class="wrap">
+  <div class="sek-nag"><div><h2>Trzy działy, jeden sklep</h2><p>Gotowe neony, części do własnych instalacji i oświetlenie LED. Wszystko z jednego koszyka i jedną przesyłką.</p></div></div>
+  <div class="dzialy">
+   <a class="dzial" href="#neony">
+    <div class="dzial-foto"><img src="img/kot-800.webp" srcset="img/kot-480.webp 480w, img/kot-800.webp 800w, img/kot-1200.webp 1200w" sizes="(max-width:900px) 100vw, 400px" width="800" height="532" loading="lazy" alt="Niebieski neon kota wykonany przez RESET neo"></div>
+    <div class="dzial-in"><h3><i class="romb c"></i>Neony</h3><p>Napisy, imiona, zwierzaki, szyldy dla firm i neony na wesela. Gotowe wzory albo według Twojego projektu.</p><ul><li>Napisowe</li><li>Obrazkowe</li><li>Dla firm</li><li>Okolicznościowe</li><li>Karwingowe</li></ul></div>
+   </a>
+   <a class="dzial" href="#popularne">
+    <div class="dzial-foto jasne"><img src="img/p9455-689.webp" srcset="img/p9455-400.webp 400w, img/p9455-689.webp 689w" sizes="(max-width:900px) 100vw, 400px" width="689" height="517" loading="lazy" alt="Zasilacz hermetyczny 12V 150W"></div>
+    <div class="dzial-in"><h3><i class="romb r"></i>Elektryka i elektronika</h3><p>Zasilacze, sterowniki Mi-Light, konektory, kable, gniazda Kontakt-Simon, akumulatory, baterie i fotowoltaika.</p><ul><li>Zasilacze</li><li>Sterowniki LED</li><li>Kontakt-Simon</li><li>Kable</li><li>Fotowoltaika</li></ul></div>
+   </a>
+   <a class="dzial" href="#popularne">
+    <div class="dzial-foto"><img src="img/ledpolka-800.webp" srcset="img/ledpolka-800.webp 800w, img/ledpolka-1200.webp 1200w, img/ledpolka-1920.webp 1920w" sizes="(max-width:900px) 160vw, 400px" width="800" height="374" loading="lazy" alt="Podświetlenie półek taśmą LED"></div>
+    <div class="dzial-in"><h3><i class="romb z"></i>Oświetlenie</h3><p>Taśmy LED i COB, neon LED Flex, profile aluminiowe z kloszami, żarówki, lampki i oświetlenie solarne.</p><ul><li>Taśmy LED</li><li>Neon LED Flex</li><li>Profile LED</li><li>Żarówki</li><li>Solarne</li></ul></div>
+   </a>
+  </div>
+  <div class="kategorie" aria-label="Popularne kategorie">
+   <a href="#popularne"><i class="romb z"></i>Taśmy LED</a><a href="#popularne"><i class="romb z"></i>Neon LED Flex</a><a href="#popularne"><i class="romb z"></i>Profile LED</a><a href="#popularne"><i class="romb z"></i>Żarówki</a><a href="#popularne"><i class="romb r"></i>Zasilacze</a><a href="#popularne"><i class="romb r"></i>Sterowniki LED</a><a href="#popularne"><i class="romb r"></i>Kontakt-Simon</a><a href="#popularne"><i class="romb r"></i>Akumulatory</a><a href="#popularne"><i class="romb r"></i>Baterie</a><a href="#neony"><i class="romb c"></i>Neony dla firm</a>
+  </div>
+ </div>
+</section>
+
+<section class="sek szara" id="popularne">
+ <div class="wrap">
+  <div class="sek-nag"><div><h2>Do instalacji LED</h2><p>Kilka produktów z oferty. W nowym sklepie ceny i stany przychodzą prosto z programu magazynowego.</p></div>
+   <div class="strzalki"><button data-tor="t1" data-k="-1" aria-label="Poprzednie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 5l-7 7 7 7"/></svg></button><button data-tor="t1" data-k="1" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  <div class="tor" id="t1">
+   <article class="karta"><div class="karta-foto"><img src="img/p7953-400.webp" srcset="img/p7953-400.webp 400w, img/p7953-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Neon LED Flex 3x6 biały neutralny, 1 m, silikon"></div><div class="karta-in"><span class="dzialik"><i class="romb z"></i>Neon LED Flex</span><h3>Neon LED Flex 3x6 biały neutralny, 1 m, silikon</h3><div class="cena-rzad"><span class="cena">32,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p1124-400.webp" srcset="img/p1124-400.webp 400w, img/p1124-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Neon LED Flex 6x12 RGB 8 W/m, 12 V"></div><div class="karta-in"><span class="dzialik"><i class="romb z"></i>Neon LED Flex</span><h3>Neon LED Flex 6x12 RGB 8 W/m, 12 V</h3><div class="cena-rzad"><span class="cena">39,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p6422-400.webp" srcset="img/p6422-400.webp 400w, img/p6422-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Taśma COB LED cyfrowa, barwa bardzo ciepła, 1 m"></div><div class="karta-in"><span class="dzialik"><i class="romb z"></i>Taśmy LED</span><h3>Taśma COB LED cyfrowa, barwa bardzo ciepła, 1 m</h3><div class="cena-rzad"><span class="cena">30,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p9678-400.webp" srcset="img/p9678-400.webp 400w, img/p9678-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Elastyczna taśma LED biała ciepła, 1 m"></div><div class="karta-in"><span class="dzialik"><i class="romb z"></i>Taśmy LED</span><h3>Elastyczna taśma LED biała ciepła, 1 m</h3><div class="cena-rzad"><span class="cena">19,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p9455-400.webp" srcset="img/p9455-400.webp 400w, img/p9455-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Zasilacz hermetyczny 12 V 12,5 A 150 W"></div><div class="karta-in"><span class="dzialik"><i class="romb r"></i>Zasilacze</span><h3>Zasilacz hermetyczny 12 V 12,5 A 150 W</h3><div class="cena-rzad"><span class="cena">125,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p9709-400.webp" srcset="img/p9709-400.webp 400w, img/p9709-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Panel naścienny Mi-Light 230 V, 4-strefowy RGB"></div><div class="karta-in"><span class="dzialik"><i class="romb r"></i>Sterowniki LED</span><h3>Panel naścienny Mi-Light 230 V, 4-strefowy RGB</h3><div class="cena-rzad"><span class="cena">80,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p0047-400.webp" srcset="img/p0047-400.webp 400w, img/p0047-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Pilot Mi-Light dwukanałowy CCT, 4-strefowy FUT006"></div><div class="karta-in"><span class="dzialik"><i class="romb r"></i>Sterowniki LED</span><h3>Pilot Mi-Light dwukanałowy CCT, 4-strefowy FUT006</h3><div class="cena-rzad"><span class="cena">41,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p1119-400.webp" srcset="img/p1119-400.webp 400w, img/p1119-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Profil aluminiowy 8x8x1, 2 m"></div><div class="karta-in"><span class="dzialik"><i class="romb z"></i>Profile LED</span><h3>Profil aluminiowy 8x8x1, 2 m</h3><div class="cena-rzad"><span class="cena">22,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta"><div class="karta-foto"><img src="img/p0108-400.webp" srcset="img/p0108-400.webp 400w, img/p0108-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Gniazdo komputerowe RJ45 kat. 5e, białe"></div><div class="karta-in"><span class="dzialik"><i class="romb r"></i>Kontakt-Simon</span><h3>Gniazdo komputerowe RJ45 kat. 5e, białe</h3><div class="cena-rzad"><span class="cena">23,50 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="neony">
+ <div class="wrap">
+  <div class="sek-nag"><div><h2>Gotowe neony</h2><p>Wzory z naszej pracowni z ceną i wymiarem. Każdy robimy na indywidualne zamówienie, więc kolor i napis można zmienić.</p></div>
+   <div class="strzalki"><button data-tor="t2" data-k="-1" aria-label="Poprzednie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 5l-7 7 7 7"/></svg></button><button data-tor="t2" data-k="1" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  <div class="tor" id="t2">
+   <article class="karta neon"><div class="karta-foto"><img src="img/n8831-400.webp" srcset="img/n8831-400.webp 400w, img/n8831-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="600" loading="lazy" alt="Neon Alicja z tęczą, 44x22 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Alicja z tęczą, 44x22 cm</h3><div class="cena-rzad"><span class="cena">359,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n3585-400.webp" srcset="img/n3585-400.webp 400w, img/n3585-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="600" loading="lazy" alt="Neon Antoś, 41x28 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Antoś, 41x28 cm</h3><div class="cena-rzad"><span class="cena">370,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n0302-400.webp" srcset="img/n0302-400.webp 400w, img/n0302-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="533" loading="lazy" alt="Neon Ada, 40x19 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Ada, 40x19 cm</h3><div class="cena-rzad"><span class="cena">250,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n6883-400.webp" srcset="img/n6883-400.webp 400w, img/n6883-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="519" loading="lazy" alt="Czarny neon Pingwin, 30x35 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Czarny neon Pingwin, 30x35 cm</h3><div class="cena-rzad"><span class="cena">350,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n9962-400.webp" srcset="img/n9962-400.webp 400w, img/n9962-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Neon Kot wąsaty, biały, 21x44 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Kot wąsaty, biały, 21x44 cm</h3><div class="cena-rzad"><span class="cena">90,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n9928-400.webp" srcset="img/n9928-400.webp 400w, img/n9928-689.webp 689w" sizes="(max-width:760px) 72vw, 300px" width="689" height="517" loading="lazy" alt="Neon Samolot, 18x18 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Samolot, 18x18 cm</h3><div class="cena-rzad"><span class="cena">55,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n0650-400.webp" srcset="img/n0650-400.webp 400w, img/n0650-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="532" loading="lazy" alt="Komplet neonów WC Pan i Pani, 26x24 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Komplet neonów WC Pan i Pani, 26x24 cm</h3><div class="cena-rzad"><span class="cena">235,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n0368-400.webp" srcset="img/n0368-400.webp 400w, img/n0368-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="532" loading="lazy" alt="Neon Krzyż, 12x20 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Krzyż, 12x20 cm</h3><div class="cena-rzad"><span class="cena">115,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+   <article class="karta neon"><div class="karta-foto"><img src="img/n0300-400.webp" srcset="img/n0300-400.webp 400w, img/n0300-800.webp 800w" sizes="(max-width:760px) 72vw, 300px" width="800" height="532" loading="lazy" alt="Neon Alkohol, 95x28 cm"></div><div class="karta-in"><span class="dzialik"><i class="romb c"></i>Na indywidualne zamówienie</span><h3>Neon Alkohol, 95x28 cm</h3><div class="cena-rzad"><span class="cena">800,00 zł</span><button class="dokosz" type="button">Do koszyka</button></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="sek noc" id="na-zamowienie">
+ <div class="wrap">
+  <div class="noc-gora">
+   <div>
+    <h2>Neon według Twojego pomysłu</h2>
+    <p class="opis">Logo firmy, szyld, napis na wesele albo imię nad łóżkiem dziecka. Projektujemy i wykonujemy neony na miejscu w Świdniku, w środku i na zewnątrz.</p>
+    <a class="btn" href="#kontakt">Zapytaj o neon</a>
+   </div>
+   <ol class="kroki">
+    <li><i class="romb c"></i><div><b>Opisz pomysł</b>Wyślij napis, logo albo szkic, wymiar i miejsce, gdzie neon zawiśnie.</div></li>
+    <li><i class="romb r"></i><div><b>Projekt i wycena</b>Dobieramy kształt liter, kolory i tło, a Ty dostajesz projekt z ceną.</div></li>
+    <li><i class="romb z"></i><div><b>Wykonanie i wysyłka</b>Neon powstaje w naszej pracowni. Odbierasz go osobiście albo kurierem.</div></li>
+   </ol>
+  </div>
+  <div class="sek-nag" style="margin-bottom:22px"><div><h3 style="font-size:22px">Nasze realizacje</h3></div>
+   <div class="strzalki"><button data-tor="t3" data-k="-1" aria-label="Poprzednie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 5l-7 7 7 7"/></svg></button><button data-tor="t3" data-k="1" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  <div class="tor real" id="t3">
+   <figure><img src="img/otwarte-480.webp" srcset="img/otwarte-480.webp 480w, img/otwarte-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/otwarte-1200.webp" alt="Szyld OTWARTE, wielokolorowy"><figcaption>Szyld OTWARTE, wielokolorowy</figcaption></figure>
+   <figure><img src="img/cukiernia-480.webp" srcset="img/cukiernia-480.webp 480w, img/cukiernia-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/cukiernia-1200.webp" alt="Cukiernia, neon zewnętrzny"><figcaption>Cukiernia, neon zewnętrzny</figcaption></figure>
+   <figure><img src="img/sushi-480.webp" srcset="img/sushi-480.webp 480w, img/sushi-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="533" loading="lazy" data-duze="img/sushi-1200.webp" alt="MOI SUSHI"><figcaption>MOI SUSHI</figcaption></figure>
+   <figure><img src="img/retyrada-480.webp" srcset="img/retyrada-480.webp 480w, img/retyrada-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/retyrada-1200.webp" alt="Bar Retyrada"><figcaption>Bar Retyrada</figcaption></figure>
+   <figure><img src="img/kasa-480.webp" srcset="img/kasa-480.webp 480w, img/kasa-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/kasa-1200.webp" alt="KASA, Cracovia"><figcaption>KASA, Cracovia</figcaption></figure>
+   <figure><img src="img/dance-480.webp" srcset="img/dance-480.webp 480w, img/dance-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/dance-1200.webp" alt="Dance Buda"><figcaption>Dance Buda</figcaption></figure>
+   <figure><img src="img/kwiaciarnia-480.webp" srcset="img/kwiaciarnia-480.webp 480w, img/kwiaciarnia-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/kwiaciarnia-1200.webp" alt="Kwiaciarnia"><figcaption>Kwiaciarnia</figcaption></figure>
+   <figure><img src="img/domgier-480.webp" srcset="img/domgier-480.webp 480w, img/domgier-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="533" loading="lazy" data-duze="img/domgier-1200.webp" alt="Dom Gier"><figcaption>Dom Gier</figcaption></figure>
+   <figure><img src="img/tattoo-480.webp" srcset="img/tattoo-480.webp 480w, img/tattoo-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="533" loading="lazy" data-duze="img/tattoo-1200.webp" alt="Studio Tatuażu Copernik"><figcaption>Studio Tatuażu Copernik</figcaption></figure>
+   <figure><img src="img/marika-480.webp" srcset="img/marika-480.webp 480w, img/marika-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="534" loading="lazy" data-duze="img/marika-1200.webp" alt="Marika"><figcaption>Marika</figcaption></figure>
+   <figure><img src="img/cytra-480.webp" srcset="img/cytra-480.webp 480w, img/cytra-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="532" loading="lazy" data-duze="img/cytra-1200.webp" alt="Cytra"><figcaption>Cytra</figcaption></figure>
+   <figure><img src="img/biblioteka-480.webp" srcset="img/biblioteka-480.webp 480w, img/biblioteka-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="533" loading="lazy" data-duze="img/biblioteka-1200.webp" alt="Biblioteka, neon na elewacji"><figcaption>Biblioteka, neon na elewacji</figcaption></figure>
+   <figure><img src="img/sheknows-480.webp" srcset="img/sheknows-480.webp 480w, img/sheknows-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="534" loading="lazy" data-duze="img/sheknows-1200.webp" alt="She Knows"><figcaption>She Knows</figcaption></figure>
+   <figure><img src="img/krolik-480.webp" srcset="img/krolik-480.webp 480w, img/krolik-800.webp 800w" sizes="(max-width:760px) 86vw, 410px" width="800" height="534" loading="lazy" data-duze="img/krolik-800.webp" alt="Królik i żaba"><figcaption>Królik i żaba</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="opinie">
+ <div class="wrap">
+  <div class="sek-nag"><div><h2>Co mówią klienci</h2></div></div>
+  <div class="opinie">
+   <div class="opinia" style="--c:var(--cyan)"><p>„Bardzo profesjonalne miejsce, nie jest to tylko sklep, lecz również strefa doradztwa. Wszystko w bardzo przystępnej cenie.”</p><b>Damian Borawski</b></div>
+   <div class="opinia" style="--c:var(--czer)"><p>„Świetny sklep. Szeroki asortyment, dobre ceny, miła obsługa i fachowe doradztwo. Na pewno tam wrócę nie raz.”</p><b>Ryszard Haniewicz</b></div>
+   <div class="opinia" style="--c:var(--ziel)"><p>„Od lat odwiedzam tych jakże doskonałych fachowców. Polecam, szczególnie tym, co niewiele wiedzą na temat oświetlenia, jak i doświadczonym elektrospecom.”</p><b>Łukasz Wrona</b></div>
+  </div>
+  <p class="zrodlo">Opinie ze strony neonyled.eu.</p>
+ </div>
+</section>
+
+<section class="sek szara" id="dostawa">
+ <div class="wrap">
+  <div class="sek-nag"><div><h2>Dostawa i płatności</h2><p>Koszty wysyłki widoczne od razu w koszyku, bez szukania po regulaminie.</p></div></div>
+  <div class="dost">
+   <table class="tab">
+    <tr><td>Paczkomat InPost<small>do 60 x 35 cm</small></td><td>19-30 zł</td></tr>
+    <tr><td>Kurier InPost<small>poniżej 2 m</small></td><td>22-55 zł</td></tr>
+    <tr><td>Kurier DPD<small>poniżej 2 m</small></td><td>23-35 zł</td></tr>
+    <tr><td>Kurier niestandardowy<small>towary powyżej 2 m</small></td><td>65-70 zł</td></tr>
+    <tr><td>Odbiór osobisty<small>ul. Niepodległości 24, Świdnik</small></td><td>0 zł</td></tr>
+   </table>
+   <div class="plat">
+    <h3>Płatności</h3>
+    <p>Szybki przelew, BLIK i karta przez Przelewy24 w ostatnim kroku zamówienia.</p>
+    <ul><li>Za pobraniem: +5 zł, dla towarów niepersonalizowanych</li><li>Neony nie są wysyłane za pobraniem</li></ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="kontakt">
+ <div class="wrap kontakt">
+  <div>
+   <h2>Kontakt</h2>
+   <div class="dane">
+    <div><i class="romb c"></i><div><b>RESET neo</b><br>ul. Niepodległości 24<br>21-040 Świdnik</div></div>
+    <div><i class="romb r"></i><div><a href="tel:+48814602500">81 460 25 00</a></div></div>
+    <div><i class="romb z"></i><div><a href="mailto:store@24sklep.pl">store@24sklep.pl</a></div></div>
+   </div>
+   <div class="mapa" id="mapa" data-src="https://maps.google.com/maps?q=Niepodleg%C5%82o%C5%9Bci%2024%2C%2021-040%20%C5%9Awidnik&amp;z=16&amp;output=embed"></div>
+  </div>
+  <form class="zap" id="zap" onsubmit="return wyslij(event)">
+   <h3>Zapytanie o neon lub produkt</h3>
+   <p class="mal">Opisz, czego szukasz. Do zapytania o neon możesz dołączyć szkic.</p>
+   <div class="dwa"><div class="pole"><label for="f1">Imię</label><input id="f1" autocomplete="name"></div><div class="pole"><label for="f2">E-mail lub telefon</label><input id="f2"></div></div>
+   <div class="pole"><label for="f3">Temat</label><select id="f3"><option>Neon na zamówienie</option><option>Pytanie o produkt</option><option>Zamówienie hurtowe</option><option>Inne</option></select></div>
+   <div class="pole"><label for="f4">Wiadomość</label><textarea id="f4" placeholder="Napis lub pomysł, wymiar, kolor, miejsce montażu"></textarea></div>
+   <div class="pole"><label for="f5">Szkic lub logo (opcjonalnie)</label><input id="f5" type="file" accept="image/*,.pdf"></div>
+   <button class="btn" type="submit">Wyślij zapytanie</button>
+   <div class="info-ok" id="ok">To podgląd strony, formularz nie wysyła jeszcze wiadomości.</div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="stopka-siatka">
+   <div><a class="logo" href="#top" aria-label="RESET neo" style="--logo:#fff;color:#fff"><svg viewBox="0 0 300 80" role="img" aria-label="RESET neo"><text x="0" y="57" font-family="Bri,Arc,sans-serif" font-weight="700" font-size="52" letter-spacing="1" fill="none" stroke="#fff" stroke-width="2.4">RESET</text><g fill="none" stroke-width="4.5" stroke-linejoin="round"><rect x="190" y="34" width="30" height="30" rx="6" transform="rotate(45 205 49)" stroke="#29DFF3"/><rect x="223" y="9" width="30" height="30" rx="6" transform="rotate(45 238 24)" stroke="#EE2E2F"/><rect x="256" y="34" width="30" height="30" rx="6" transform="rotate(45 271 49)" stroke="#78D054"/></g><g font-family="Georgia,serif" font-style="italic" font-size="22" text-anchor="middle"><text x="205" y="56" fill="#29DFF3">n</text><text x="238" y="31" fill="#EE2E2F">e</text><text x="271" y="56" fill="#78D054">o</text></g></svg></a><p style="margin-top:16px;max-width:320px">Rodzinna firma ze Świdnika. Neony LED, elektronika i oświetlenie. Pozdrawiamy świetliście.</p></div>
+   <div><h4>Sklep</h4><ul><li><a href="#neony">Neony</a></li><li><a href="#popularne">Elektryka i elektronika</a></li><li><a href="#popularne">Oświetlenie</a></li><li><a href="#na-zamowienie">Neon na zamówienie</a></li></ul></div>
+   <div><h4>Zakupy</h4><ul><li><a href="#dostawa">Dostawa</a></li><li><a href="#dostawa">Płatności</a></li><li><a href="#kontakt">Zwroty i reklamacje</a></li><li><a href="#kontakt">Regulamin</a></li></ul></div>
+   <div><h4>Znajdź nas</h4><ul><li><a href="https://www.facebook.com/profile.php?id=100037219757138" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/resetneo/" rel="noopener">Instagram</a></li><li><a href="https://neonyled.eu" rel="noopener">neonyled.eu</a></li></ul></div>
+  </div>
+  <div class="stopka-dol"><span>© <span id="rok">2026</span> RESET neo, Świdnik</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=24sklep.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+  <p class="podglad-info">Podgląd koncepcji nowej strony głównej. Zdjęcia i treści ze stron 24sklep.pl i neonyled.eu.</p>
+ </div>
+</footer>
+
+<div class="mob" id="mob"><a class="btn ciemny" href="tel:+48814602500">Zadzwoń</a><a class="btn" href="#kontakt">Zapytaj o neon</a></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><button class="zam" aria-label="Zamknij">×</button><button class="pop" aria-label="Poprzednie">‹</button><img alt=""><button class="nas" aria-label="Następne">›</button><p></p></div>
+<script src="app.js" defer></script>
+</body>
+</html>
